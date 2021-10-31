@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+       <head>
+         <title> Navi opdracht </title>
+         <link rel='stylesheet'href='./style/style.css'></link>
+         <script defer src='./script/script.js'></script>
+       </head>
+       <body>
+          <p id='result' class='result'></p>
+          <p class='result'>Click om het traject te bekijken!</p>
+          <div class='direction'>
+            <div class='direction__sign'></div>
+            <p id='currentPoint' class='direction__point'></p>
+          </div>
+          <svg class='raster'>
+            <path 
+              id='raster'
+              class='raster__raster'
+            />
+            <path
+              id='path'
+              class='raster__path'
+              d='M 1860 500'
+            />
+          </svg>
+       </body>
+</html>

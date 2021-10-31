@@ -1,0 +1,60 @@
+:root{
+    --direction: 0turn;
+}
+
+.result{
+    font-size: 20px;
+}
+.direction{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    margin: 1em;
+    padding: 1%;
+    border: 1px solid grey;
+    &__sign{
+        position: relative;
+        width: 50px;
+        height: 50px;
+        background: blue;
+        color: white;
+        border-radius: 50%;
+        box-shadow: 
+            0px 0px 0px 2px white,
+            0px 0px 0px 3px grey;
+        font-family: 'Lucida Sans Unicode', sans-serif;
+        font-size: 3em;
+        font-weight: bold;
+        transition: 300ms;
+        transform: rotateZ(var(--direction));
+        &::after{
+            content: '\2191';
+            position: absolute;
+            top: -0.2em;
+            left: 0.25em;
+        }
+    }
+    &__point{
+        margin: 0.5em;
+        font-weight: bold;
+    }
+}
+
+.raster{
+    width: 2000px;
+    height: 2000px;
+    border: 1px solid salmon;
+    &__raster{
+        fill: none;
+        stroke: grey;
+        stroke-width: 1px;
+    }
+    &__path{
+        fill: none;
+        stroke: blue;
+        stroke-width: 2px;
+        transition: 300ms;
+    }
+}
